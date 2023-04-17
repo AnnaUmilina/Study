@@ -15,8 +15,8 @@ class Controller:
 
     def working_with_answer(self, answer):
         if answer == '1':
-            movie = self.user_interface.add_movie()    #возвращает словарь с данными о фильме от пользователя
-            self.name_movie.add_film(movie)    #вызов метода,который добавляет словарь, сохранивщейся от пользователя
+            movie = self.user_interface.add_movie()  # возвращает словарь с данными о фильме от пользователя
+            self.name_movie.add_film(movie)  # вызов метода,который добавляет словарь, сохранивщейся от пользователя
         elif answer == '2':
             movies = self.name_movie.get_all_films()
             self.user_interface.show_all_movies(movies)
@@ -29,13 +29,20 @@ class Controller:
             else:
                 self.user_interface.show_single_movie(film)
         elif answer == '4':
-            movie_title = self.user_interface.get_user_movie()   #словарь с данными об 1 фильме
+            movie_title = self.user_interface.get_user_movie()  # словарь с данными об 1 фильме
             try:
-                title = self.name_movie.remove_film(movie_title)     #удаляет сл-рь с опр фил-м внутри общего списка ф-в
+                title = self.name_movie.remove_film(movie_title)  # удаляет сл-рь с опр фил-м внутри общего списка ф-в
             except KeyError:
                 self.user_interface.show_incorrect_error(movie_title)
             else:
                 self.user_interface.remove_single_movie(title)
+
+        elif answer == '5':
+            favourites_movie = self.user_interface.add_favourites_movie()
+            self.name_movie.add_movie(favourites_movie)
+        elif answer == '6':
+            favorite_catalog = self.name_movie.get_favorite_film()
+            self.user_interface.show_favorite_films(favorite_catalog)
         elif answer == 'exit':
             self.name_movie.save_data()
         else:

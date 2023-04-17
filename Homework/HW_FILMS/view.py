@@ -19,6 +19,8 @@ class UserInterface:
               '2 - каталог фильмов\n'
               '3 - просмотр определенного фильма\n'
               '4 - удаление фильма\n'
+              '5 - добавить в "Хочу посмотреть"\n'
+              '6 - "Хочу посмотреть" каталог\n'
               'exit - выход из программы')
         user_answer = input('Выберите вариант действия: ')
         return user_answer
@@ -38,6 +40,7 @@ class UserInterface:
         for key in dict_movie:
             dict_movie[key] = input(f'Введите {key} фильма: ')
         return dict_movie
+
     @add_title('Каталог фильмов')
     def show_all_movies(self, movies):
         for i, movie in enumerate(movies, start=1):
@@ -61,3 +64,13 @@ class UserInterface:
 
     def show_incorrect_error(self, movie_title):
         print(f'Фильма с названием {movie_title} не существует')
+
+    @add_title('добавить в "Хочу посмотреть"')
+    def add_favourites_movie(self):
+        favorite_movie = input('Введите название фильма: ')
+        return favorite_movie
+
+    @add_title('"Хочу посмотреть" каталог')
+    def show_favorite_films(self, favorite_catalog):
+        for i in favorite_catalog:
+            print(f'- {i}')

@@ -17,6 +17,8 @@ class Movie:
 
 
 class MovieModel:
+    lst_film = []
+
     def __init__(self):
         self.name_film = 'name_film'
         self.films = self.load_data()
@@ -41,7 +43,7 @@ class MovieModel:
         }
         return dict_film
 
-    def remove_film(self,movie_title):
+    def remove_film(self, movie_title):
         return self.films.pop(movie_title)
 
     def save_data(self):
@@ -54,3 +56,10 @@ class MovieModel:
                 return pickle.load(f)
         else:
             return dict()
+
+    def add_movie(self, favourites_movie):
+        self.lst_film.append(favourites_movie)
+        return self.lst_film
+
+    def get_favorite_film(self):
+        return self.lst_film
