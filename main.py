@@ -4297,20 +4297,143 @@ import csv
 # if __name__ == '__main__':
 #     main()
 
-import socket
+# import socket
+#
+#
+# def run():
+#     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#     server_socket.bind(('127.0.0.1', 5000))
+#     server_socket.listen()
+#
+#     while True:
+#         client_socket, abbr = server_socket.accept()
+#         request = client_socket.recv(1024)
+#
+#         print(f'Клиент: {abbr} => \n{request}\n')
+#
+#
+# if __name__ == '__main__':
+#     run()
+# /////////////////////////////////////////////////////////////////////////////////////
+
+# import sqlite3
+
+# with sqlite3.connect('users.db') as con:
+#     cur = con.cursor()
+# cur.execute("""CREATE TABLE IF NOT EXISTS person(
+# id INTEGER PRIMARY KEY AUTOINCREMENT,
+# name TEXT NOT NULL,
+# phone BLOB NOT NULL DEFAULT '+79991202383',
+# age INTEGER CHECK(age > 0 AND age < 100),
+# email TEXT UNIQUE
+# )""")
+# cur.execute("""
+# ALTER TABLE person
+# RENAME TO person_table
+# """)
+# cur.execute("""
+# ALTER TABLE person_table
+# ADD COLUMN address TEXT
+# """)
+
+# cur.execute("""
+# ALTER TABLE person_table
+# RENAME COLUMN address TO home_address
+# # """)
+#
+# cur.execute("""
+# ALTER TABLE person_table
+# DROP COLUMN home_address
+# """)
+
+# with sqlite3.connect('db_4.db') as con:
+#     cur = con.cursor()
+#     cur.execute("""
+#     SELECT *
+#     FROM Ware
+#     ORDER BY Price DESC
+#     LIMIT 2,5
+#     """)
+#
+#     res = cur.fetchall()
+#     print(res)
 
 
-def run():
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('127.0.0.1', 5000))
-    server_socket.listen()
+import sqlite3
 
-    while True:
-        client_socket, abbr = server_socket.accept()
-        request = client_socket.recv(1024)
+#
+# cars = [
+#     ('BMW', 54000),
+#     ('Chevrolet', 46000),
+#     ('Daewoo', 38000),
+#     ('Citroen', 29000),
+#     ('Honda', 33000),
+# ]
+#
+# with sqlite3.connect('cars.db') as con:
+#     cur = con.cursor()
+#     cur.execute("""
+#     CREATE TABLE IF NOT EXISTS cars(
+#         car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         model TEXT,
+#         price INTEGER
+#     )
+#     """)
+#
+#     cur.execute("UPDATE cars SET price = :Price WHERE model LIKE 'B%'", {'Price': 0})
 
-        print(f'Клиент: {abbr} => \n{request}\n')
+# cur.execute("INSERT INTO cars VALUES(1, 'Renault',22000)")
+# cur.execute("INSERT INTO cars VALUES(2, 'Volvo',29000)")
+# cur.execute("INSERT INTO cars VALUES(3, 'Mercedes',57000)")
+# cur.execute("INSERT INTO cars VALUES(4, 'Bentley',35000)")
+# cur.execute("INSERT INTO cars VALUES(5, 'Audi',52000)")
 
+# for car in cars:
+#     cur.execute("INSERT INTO cars VALUES(NULL, ?, ?)", car)
 
-if __name__ == '__main__':
-    run()
+# cur.executemany("INSERT INTO cars VALUES(NULL, ?, ?)", cars)
+# def read_ava(n):
+#     try:
+#         with open(f'avatars/{n}.png', 'rb') as f:
+#             return f.read()
+#     except IOError as e:
+#         print(e)
+#         return False
+#
+# def write_ava(name, data):
+#     try:
+#         with open(name, 'wb') as f:
+#             f.write(data)
+#     except IOError as e:
+#         print(e)
+#         return False
+#     return True
+#
+#
+# with sqlite3.connect('cars.db') as con:
+#     con.row_factory = sqlite3.Row
+#     cur = con.cursor()
+#     cur.executescript("""
+#     CREATE TABLE IF NOT EXISTS users(
+#         name TEXT,
+#         ava BLOB,
+#         score INTEGER
+#     );
+#     """)
+#
+#     # img = read_ava(1)
+#     # if img:
+#     #     binary = sqlite3.Binary(img)
+#     #     cur.execute("INSERT INTO users VALUES('Илья', ?, 1000)", (binary,))
+#
+#     cur.execute("SELECT ava FROM users")
+#     img = cur.fetchone()['ava']
+#
+#     write_ava('out.png', img)
+
+# with sqlite3.connect('cars.db') as con:
+#     cur = con.cursor()
+#
+#     for sql in con.iterdump():
+#         print(sql)
+
