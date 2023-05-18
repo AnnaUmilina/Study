@@ -1,0 +1,9 @@
+{% include 'two.html' %}
+<h1>Страница с домашним заданием</h1>
+<ul>
+    {% for i in hw %}
+    <li>{{ i.lesson }} - {{ i.task }}</li>
+    {% endfor %}
+</ul>
+<p>Домашнее задание выполнено!</p>
+{% include 'three.html' %}
