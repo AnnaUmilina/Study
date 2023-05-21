@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+
+<form action="">
+    <p>Название книги или автора: <input type="text"><input type="submit" value="искать"></p>
+    <p>Жанр: <input type="text"><input type="submit" value="искать"></p>
+</form>
+{% endblock %}
