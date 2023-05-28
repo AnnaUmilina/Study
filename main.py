@@ -4437,3 +4437,43 @@ import sqlite3
 #     for sql in con.iterdump():
 #         print(sql)
 
+# from jinja2 import Template
+
+# name = 'Игорь'
+# age = 28
+#
+# tm = Template('Привет {{ n }}.Мне {{ a }} лет')
+# msg = tm.render(n=name, a=age)
+#
+# print(msg)
+#
+# from jinja2 import Environment, FileSystemLoader
+#
+# person = [
+#     {'name': 'Алексей', 'year': 18, 'weight': 78.5},
+#     {'name': 'Никита', 'year': 28, 'weight': 82.3},
+#     {'name': 'Виталий', 'year': 33, 'weight': 94.2}
+# ]
+#
+# file_loader = FileSystemLoader('templates')
+# env = Environment(loader=file_loader)
+#
+# tm = env.get_template('home.html')
+# msg = tm.render(users=person)
+#
+# print(msg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

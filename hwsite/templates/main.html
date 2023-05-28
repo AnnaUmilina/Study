@@ -2,9 +2,19 @@
 
 {% block content %}
 {{ super() }}
+<h1>Все статьи:</h1>
 
-<p><a href="">Топ 100 книг нон-фикшн</a></p>
-<p><a href="">Топ 100 книг зарубежной классики</a></p>
-<p><a href="">Топ 100 книг российской классики</a></p>
+{% if courses | length < 1 %}
+    <h4 class="center">Пока не добавлено ни одной статьи.</h4>
+{% else %}
+
+    {% for course in courses %}
+    <div class="block">
+        <div class="text"><a href="/programme/{{ course.id }}">{{ course.title }}</a></div>
+        <div class="sub"><a href="/delete/{{course.id}}">Удалить</a></div>
+        <div class="sub"><a href="/programme/{{course.id}}">Обновить</a></div>
+    </div>
+    {% endfor %}
+{% endif %}
 
 {% endblock %}

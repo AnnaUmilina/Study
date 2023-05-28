@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<div class="otz">
+    <h1>{{ course.title}}</h1>
+
+    <div class="forma">
+        <form action="/programme/{{ course.id }}" method="post">
+        <textarea class='submit' name="content" cols="100" rows="40">{{ course.content }}</textarea>
+        <input class='submit' type="submit" value="Обновить">
+        <a href="{{url_for('main')}}"><input class='submit' type="submit" value="Вернуться на главную"></a>
+        </form>
+    </div>
+</div>
+{% endblock %}

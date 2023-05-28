@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+
+<h1>Добавить новую статью</h1>
+
+
+<div class="content">
+    <div class="form">
+        <form action="" method="post">
+            <p>Автор: <input type="text" name="name"></p>
+            <p>Название статьи: <input type="text" name="title"></p>
+            <textarea name="content" cols="50" rows="10" placeholder="Текст статьи"></textarea>
+            <input type="submit" value="Добавить статью" id="input">
+        </form>
+    </div>
+</div>
+{% endblock %}
