@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<div class="conteiner">
+<div class="container">
     <h1>Генератор паролей</h1>
+    <a href="{% url 'information' %}"><input type="submit" value="Информация" class='info'></a>
     <form action="{% url 'password' %}">
         <p><select name="length">
             {% for i in lst %}

@@ -15,3 +15,21 @@ body{
     box-sizing: border-box;
     border-radius: 6px;
 }
+.rule{
+    background: greenyellow;
+}
+.container h4{
+    display: inline-block;
+    background: pink;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px;
+}
+.index{
+    text-align: center;
+}
+.info{
+    margin: 10px;
+    padding: 5px;
+}
