@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Главные герои романа "Унесенные ветром" М.Митчел</h1>
+{% for project in projects %}
+<div class="element">
+    <div><img src="{{ project.image.url }}" alt=""></div>
+    <div class="description">{{ project.description }}</div>
+    <div class="text">
+        <h2><a href="{{ project.url }}" target="_blank">{{ project.title }}</a></h2>
+    </div>
+</div>
+{% endfor %}
+{% endblock%}
