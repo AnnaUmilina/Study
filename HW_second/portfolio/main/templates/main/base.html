@@ -5,8 +5,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'main/fav.jpg' %}" type="image/jpg">
 </head>
 <body>
+<div class="menu">
+    <div class="wrap">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'main/4.webp' %}" alt=""></a>
+        </div>
+    </div>
+    <ul>
+        <li><a href="{% url 'index' %}">Главная</a></li>
+        <li><a href="{% url 'blogs' %}">Отзывы</a></li>
+        <li><a href="{% static 'main/book.txt' %}">Книга</a></li>
+    </ul>
+</div>
+
 {% block content %}
 {% endblock%}
 </body>

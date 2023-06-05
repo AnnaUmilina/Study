@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<h1>Отзывы</h1>
+
+<h2 id="count">Количество отзывов: {{ blogs.count }}</h2>
+
+{% for blog in blogs %}
+<div class="txt">
+    <h2><a href="{{ blog.id }}" target="_blank">{{ blog.author }}</a></h2>
+    <p>{{ blog.date }}</p>
+    <p>{{ blog.description|truncatechars:360 }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

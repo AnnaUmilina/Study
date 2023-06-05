@@ -34,3 +34,45 @@ h1{
     text-align: end;
     font-size: 50px;
 }
+.logo img{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+}
+.menu{
+    padding: 10px;
+    background: #bbded67d;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.menu li{
+    margin: 5px 50px;
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(104, 97, 97);
+    font-family: 'Montserrat', sans-serif;
+}
+#count{
+    margin: 20px;
+}
+.txt{
+    background: #BBDED6;
+    margin: 20px;
+    padding: 30px 0 25px 20px;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.txt a{
+    text-decoration: none;
+    color: rgb(251, 246, 246);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background: #61C0BF;
+    padding: 10px;
+}
+.txt h1{
+    background: #61C0BF;
+    margin: 0;
+}
