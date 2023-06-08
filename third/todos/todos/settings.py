@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j3%t+d7=f@j0m0ztuxz9rekim@x#lp(h7uv0d_yzotyck^sdf+'
+SECRET_KEY = 'django-insecure-hjr^&7ulk$(+10%g8-^l30s!05nf7%mko#5u#cwf&mj=u0-(g_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -104,13 +104,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru-Ru'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

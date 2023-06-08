@@ -2,7 +2,9 @@
 
 {% block content %}
 
-<h1>Регистрация: </h1>
+<h1>Регистрация:</h1>
+
+<div>{{ error }}</div>
 <form method="post" class="register">
     {% csrf_token %}
     {{ form.as_p }}

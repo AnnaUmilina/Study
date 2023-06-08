@@ -76,3 +76,22 @@ h1{
     background: #61C0BF;
     margin: 0;
 }
+form{
+    font-size: 20px;
+    margin: 20px;
+}
+.btn{
+    background-color: #61C0BF;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    margin-top: 50px;
+}
+.wrap li{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.no{
+    background-color: #61C0BF;
+    padding: 10px;
+}
