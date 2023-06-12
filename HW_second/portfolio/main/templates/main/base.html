@@ -15,10 +15,14 @@
         </div>
     </div>
     <ul>
+        {% if user.is_authenticated %}
+        <p class="logo">Пользователь: {{ user.username }}</p>
+        {% endif %}
         <li><a href="{% url 'index' %}">Главная</a></li>
         <li><a href="{% url 'blogs' %}">Отзывы</a></li>
         <li><a href="{% static 'main/book.txt' %}">Книга</a></li>
-        <li><a href="{% url 'home' %}">Регистрация</a></li>
+        <li><a href="{% url 'home' %}">Вход/Регистрация</a></li>
+
     </ul>
 </div>
 

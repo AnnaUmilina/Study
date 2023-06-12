@@ -34,6 +34,11 @@ h1{
     text-align: end;
     font-size: 50px;
 }
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin: 10px;
+}
 .logo img{
     width: 300px;
     height: 100px;
@@ -86,12 +91,38 @@ form{
     height: 50px;
     font-size: large;
     margin-top: 50px;
+    border: 2px solid #3c7978;
+    border-radius: 20px;
 }
-.wrap li{
+.wrap_one li{
     font-size: 20px;
     margin-bottom: 20px;
+    border: 2px solid #3c7978;
+    margin: 20px;
+    padding: 10px 20px;
+    list-style-type: none;
+    border-radius: 20px;
 }
 .no{
     background-color: #61C0BF;
     padding: 10px;
+}
+.wrap_two li{
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3c7978;
+    margin: 20px;
+    padding: 10px 20px;
+    list-style-type: none;
+}
+.wrap_two p{
+    margin: 10px 30px;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-bottom: 2px solid #3c7978;
+    position: absolute;
+    right: 0;
+}
+.lk{
+    margin: 100px 20px;
 }

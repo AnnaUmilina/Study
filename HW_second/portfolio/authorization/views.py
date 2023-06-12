@@ -3,10 +3,12 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
     return render(request, 'authorization/home.html')
+
 
 def signupuser(request):
     if request.method == 'GET':
@@ -29,10 +31,12 @@ def signupuser(request):
             })
 
 
+@login_required
 def currentauthorization(request):
     return render(request, 'authorization/currentauthorization.html')
 
 
+@login_required
 def logoutuser(request):
     if request.method == 'POST':
         logout(request)

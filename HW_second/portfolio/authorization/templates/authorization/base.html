@@ -11,19 +11,20 @@
 
 {% if user.is_authenticated %}
 <div class="menu">
-    <div class="wrap">
+    <div class="wrap_two">
         <ul>
             <li class="logo">Пользователь: {{ user.username }}</li>
             <form action="{% url 'logoutuser' %}" method="post">
                 {% csrf_token %}
                 <button class="btn">Выйти</button>
             </form>
+            <p><a href="{% url 'index' %}">Вернуться на главную</a></p>
         </ul>
     </div>
 </div>
 {% else %}
 <div class="menu">
-    <div class="wrap">
+    <div class="wrap_one">
         <ul>
             <h1 class="no">Вход/Регистрация: </h1>
             <li><a href="{% url 'signupuser' %}">Зарегистрироваться: </a></li>
